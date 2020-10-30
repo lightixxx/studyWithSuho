@@ -74,8 +74,19 @@ function getDayOfWeek(day, code) {
 }
 
 
-// jQuery의 $ selector 함수
+// jQuery 기능 만들기
 function $(selector) {
-  const target = document.querySelector(selector);
-}
+  const elem = document.querySelector(selector);
 
+  return {
+    on: function(eventName, callback) {
+      elem.addEventlistener(eventName, callback);
+    },
+    addClass: function(className) {
+      elem.classList.add(className);
+    },
+    removeClass: function(className) {
+      elem.classList.remove(className);
+    }
+  }
+}
