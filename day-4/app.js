@@ -55,11 +55,11 @@ const genders = ["남", "여", "여", "여", "남", "여", "남", "여"];
 
 // getDayOfWeek 함수
 // 조건문(식) 없이 구현
-// function getDayOfWeek(dayNum) {
-//   const dayOfWeek = ['Sunday', 'Monday', 'Thuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+function getDayOfWeek(dayNum) {
+  const dayOfWeek = ['Sunday', 'Monday', 'Thuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-//   return dayOfWeek[dayNum];
-// }
+  return dayOfWeek[dayNum];
+}
 
 
 // getDayOfWeek 함수 리팩토링
