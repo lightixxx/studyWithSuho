@@ -6,6 +6,37 @@ function renderHtml(component) {
   screen.innerHTML = component;
 }
 
+function button(props) {
+  // TODO
+  const elemId = props.id;
+  const elemChildren = props.children;
+
+  return `<button type="button" id="${elemId}">${elemChildren}</button>`
+}
+
+function $(selector) {
+  // TODO
+  const elem = document.querySelector(selector);
+
+  if(typeof selector !== 'string') {
+    selector = String(selector)
+  }
+
+  return {
+    on: function(eventName, callback) {
+      elem.addEventListener(eventName, callback);
+    },
+    hasClass: function(className) {
+      elem.classList.contains(className);
+    },
+    addClass: function(className) {
+      elem.classList.add(className);
+    },
+    removeClass: function(className) {
+      elem.classList.remove(className);
+    }
+  }
+}
 
 /******* 이 아래 사용자 코드는 수정하는 부분이 아닙니다. *******/
 const toggleButton = button({ id: "btn", children: "토글" });
