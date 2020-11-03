@@ -6,34 +6,28 @@ function renderHtml(component) {
   screen.innerHTML = component;
 }
 
-function button(props) {
+function button({id, children}) {
   // TODO
-  const elemId = props.id;
-  const elemChildren = props.children;
-
-  return `<button type="button" id="${elemId}">${elemChildren}</button>`
+  return `<button type="button" id="${id}">${children}</button>`;
 }
 
 function $(selector) {
   // TODO
-  const elem = document.querySelector(selector);
-
-  if(typeof selector !== 'string') {
-    selector = String(selector)
-  }
-
+  const elem = 
+    typeof selector === 'string' ? document.querySelector(selector) : selector;
+  
   return {
     on: function(eventName, callback) {
       elem.addEventListener(eventName, callback);
-    },
-    hasClass: function(className) {
-      elem.classList.contains(className);
     },
     addClass: function(className) {
       elem.classList.add(className);
     },
     removeClass: function(className) {
       elem.classList.remove(className);
+    },
+    hasClass: function(className) {
+      return elem.classList.contains(className);
     }
   }
 }
