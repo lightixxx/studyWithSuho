@@ -30,7 +30,7 @@ const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 // const upper = getUpper(alphabet);
 
 
-// map 함수를 만들기
+// map 함수 만들기
 function map(list, cb) {
   const result = [];
   
@@ -50,5 +50,18 @@ const square = map(numbers, function (v) {
   return v * v;
 });
 
-console.log(upper);
-console.log(square);
+// console.log(upper);
+// console.log(square);
+
+
+// 끝말잇기 만들기
+while(true) {
+  let newWord = prompt(word);
+
+  if(word[word.length - 1] === newWord[0]) {
+    alert('딩동댕');
+    word = newWord;
+  } else {
+    alert('땡');
+  }
+}
