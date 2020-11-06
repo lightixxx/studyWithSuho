@@ -53,15 +53,32 @@ const square = map(numbers, function (v) {
 // console.log(upper);
 // console.log(square);
 
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+
+function hoho(number) {
+  let result = [];
+
+  for(let i = 0; i < number[i]; i++) {
+    if(number[i] % 2 === 0) {
+      result.push(number[i]);
+    }
+  }
+  return result;
+}
+
+const evenNum = hoho(num);
+console.log(evenNum);
 
 // 끝말잇기 만들기
-while(true) {
-  let newWord = prompt(word);
+// while(true) {
+//   let newWord = prompt(word);
 
-  if(word[word.length - 1] === newWord[0]) {
-    alert('딩동댕');
-    word = newWord;
-  } else {
-    alert('땡');
-  }
-}
+//   if(word[word.length - 1] === newWord[0]) {
+//     alert('딩동댕');
+//     word = newWord;
+//   } else {
+//     alert('땡');
+//   }
+// }
