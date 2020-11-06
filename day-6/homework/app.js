@@ -65,5 +65,15 @@ class Arr {
 const list = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 const arr = new Arr(list);
 
-arr.filter(v => v > 8);
-arr.map(v => v * 3);
+// arr.filter(v => v > 8);
+// arr.map(v => v * 3);
+
+
+// 별찍기
+for(let star = 1; star <= 5; star++) {
+  console.log('*'.repeat(star));
+}
+
+for(let star = 5; star >= 1; star--) {
+  console.log('*'.repeat(star));
+}
