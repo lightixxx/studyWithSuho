@@ -71,9 +71,15 @@ const arr = new Arr(list);
 
 // 별찍기
 for(let star = 1; star <= 5; star++) {
-  console.log('*'.repeat(star));
+  // console.log('*'.repeat(star));
 }
 
 for(let star = 5; star >= 1; star--) {
-  console.log('*'.repeat(star));
+  // console.log('*'.repeat(star));
+}
+
+for(let star = 1; star <= 5; star++) {
+  for(let star2 = 1; star <= star2; star2++) {
+    // console.log(' '.repeat(star2), '*'.repeat(star));
+  }
 }
