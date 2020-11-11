@@ -78,8 +78,3 @@ for(let star = 5; star >= 1; star--) {
   // console.log('*'.repeat(star));
 }
 
-for(let star = 1; star <= 5; star++) {
-  for(let space = 0; space > star; space++) {
-    // console.log(" ".repeat(space), "*".repeat(star),);
-  }
-}
