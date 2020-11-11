@@ -78,3 +78,57 @@ for(let star = 5; star >= 1; star--) {
   // console.log('*'.repeat(star));
 }
 
+const calculator = {
+  plus: function(a, b) {
+    return a + b;
+  },
+  minus: function(a, b) {
+    return a - b;
+  },
+  multiply: function(a, b) {
+    return a * b;
+  },
+  divide: function(a, b) {
+    return a / b;
+  },
+  power: function(a, b) {
+    return a ** b;
+  }
+}
+
+// const result = calculator.power(5, 5);
+
+
+// DOM 조작
+const title = document.querySelector('.title');
+// title.innerHTML = 'wooooooow!';
+// title.style.color = 'red';
+
+// const BASE_COLOR = 'rgb(52, 73, 94)';
+// const OTHER_COLOR = '#7f8c8d';
+
+// function clickHandler() {
+//   const currentColor = title.style.color;
+//   if(currentColor == BASE_COLOR) {
+//     title.style.color = OTHER_COLOR;
+//   } else {
+//     title.style.color = BASE_COLOR;
+//   }
+// }
+
+const CLICKED_CLASS = 'clicked';
+function clickHandler() {
+  // const hasClass = title.classList.contains(CLICKED_CLASS);
+  // if (hasClass) {
+  //   title.classList.remove(CLICKED_CLASS);
+  // } else {
+  //   title.classList.add(CLICKED_CLASS);
+  // }
+  title.classList.toggle(CLICKED_CLASS);
+}
+
+function init() {
+  // title.style.color = BASE_COLOR;
+  window.addEventListener('click', clickHandler);
+}
+init();
